@@ -10,3 +10,5 @@
 🖌️ [맨 위로 올라가는 버튼 만들기](./scroll_to_top.html)
 
 🖌️ [flexbox를 이용한 레이아웃](./flexbox.html)
+
+🖌️ [BEM을 이용한 flexbox](./flexbox02.html)
