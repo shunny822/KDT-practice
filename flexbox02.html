@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* block */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .box1 {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      flex-wrap: wrap;
+      align-content: center;
+      text-align: center;
+    }
+
+    /* element */
+    .navbar__logo {
+      width: 250px;
+      height: 50px;
+    }
+
+    .box2__img {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 50px;
+    }
+
+    /* modifier */
+    .navbar__line {
+      border-bottom: 2px solid black;
+      margin: 0 20px 50px 20px;
+      padding: 10px 30px;
+    }
+
+    .box2__text--margin > p {
+      margin: 10px 0;
+    }
+
+    * {
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar__line">
+    <img class="navbar__logo" src="./04.png" alt="하이퍼그로스">
+    <h2>Hyper S23</h2>
+  </nav>
+
+  <div class="box1">
+    <div class="box2 box2__text--margin">
+      <h2>하이퍼 S23 Super</h2>
+      <br>
+      <img class="box2__img" src="./03.png" alt="스마트폰">
+      <br>
+      <p>몰입형 게임 최적화</p>
+      <br>
+      <p>화면 크기</p>
+      <p>173.1mm</p>
+      <br>
+      <p>3,088 x 1,440</p>
+      <p>(Quad HD+ 엣지 디스플레이)</p>
+      <br>
+      <p>최대 밝기</p>
+      <p>1,750 니트</p>
+      <br>
+      <p>가변주사율</p>
+      <p>1~120 Hz</p>
+    </div>
+    <div class="box2 box2__text--margin">
+      <h2>하이퍼 S23+</h2>
+      <br>
+      <img class="box2__img" src="./03.png" alt="스마트폰">
+      <br>
+      <p>야외에서도 뛰어난 선명도</p>
+      <br>
+      <p>화면 크기</p>
+      <p>166.5mm</p>
+      <br>
+      <p>2,340 x 1,080</p>
+      <p>(FHD+ 플랫 디스플레이)</p>
+      <br>
+      <p>최대 밝기</p>
+      <p>1,750 니트</p>
+      <br>
+      <p>가변주사율</p>
+      <p>48~120 Hz</p>
+    </div>
+    <div class="box2 box2__text--margin">
+      <h2>하이퍼 S23</h2>
+      <br>
+      <img class="box2__img" src="./03.png" alt="스마트폰">
+      <br>
+      <p>야외에서도 뛰어난 선명도</p>
+      <br>
+      <p>화면 크기</p>
+      <p>153.9mm</p>
+      <br>
+      <p>2,340 x 1,080</p>
+      <p>(FHD+ 플랫 디스플레이)</p>
+      <br>
+      <p>최대 밝기</p>
+      <p>1,750 니트</p>
+      <br>
+      <p>가변주사율</p>
+      <p>48~120 Hz</p>
+    </div>
+    
+  </div>
+</body>
+</html>
