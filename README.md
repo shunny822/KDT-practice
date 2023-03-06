@@ -5,10 +5,10 @@
 
 ### 🎨 CSS practice
 
-🖌️ [프로필 카드 만들기](./profile_card.html)
+🖌️ [프로필 카드 만들기](front/profile_card.html)
 
-🖌️ [맨 위로 올라가는 버튼 만들기](./scroll_to_top.html)
+🖌️ [맨 위로 올라가는 버튼 만들기](front/scroll_to_top.html)
 
-🖌️ [flexbox를 이용한 레이아웃](./flexbox.html)
+🖌️ [flexbox를 이용한 레이아웃](front/flexbox.html)
 
-🖌️ [BEM을 이용한 flexbox](./flexbox02.html)
+🖌️ [BEM을 이용한 flexbox](front/flexbox02.html)
