@@ -1,9 +1,8 @@
 # KDT-practice
 
-## Front-end
-✨ Click [here](https://shunny822.github.io/KDT-practice/) to go my site.
+## ✨ Click [here](https://shunny822.github.io/KDT-practice/) to go my site.
 
-### 🎨 CSS practice
+### 🎨 Front-end
 
 🖌️ [프로필 카드 만들기](front/profile_card.html)
 
