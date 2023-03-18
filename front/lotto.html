@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="m-5">로또 번호 생성기</h1>
+  <button type="button" class="btn btn-primary mb-5" id="btn">생성</button>
+  
+  <div>
+    
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    function match(myNums, lottoNums, bonusNum) {
+      let count = 0
+      myNums.forEach((n) => {
+        if (n in lottoNums) {
+          count += 1
+        }
+      })
+      if (count === 6) {
+        return '1등'
+      }
+      else if (count === 5) {
+        if (myNums.includes(bonusNum)) {
+          return '2등'
+        } else {
+          return '3등'
+        }
+      }
+      else if (count === 4) {
+        return '4등'
+      }
+      else if (count === 3) {
+        return '5등'
+      }
+      else {
+        return '꽝'
+      }
+    }
+
+    const btn = document.querySelector('#btn')
+
+    btn.addEventListener('click', (event) => {
+      const numbers = _.range(1, 46)
+      const lottoNumbers = _.sampleSize(numbers, 7)
+      const myNumbers = _.sampleSize(numbers, 6)
+      myNumbers.sort()
+      const bonus = lottoNumbers.pop()
+      const resultDiv = document.querySelector('#result')
+      const rank = match(myNumbers, lottoNumbers, bonus)
+      
+      const containDiv = document.createElement('div')
+      containDiv.classList.add('d-flex', 'justify-content-center')
+
+      myNumbers.forEach((n) => {
+        const balls = document.createElement('div')
+        const textTag = document.createElement('div')
+        balls.classList.add('border', 'border-white', 'rounded-circle', 'align-middle', 'd-flex', 'align-items-center')
+        balls.setAttribute('style', 'width: 100px; height: 100px; margin: 20px;')
+        textTag.classList.add('text-center', 'fs-1', 'z-3')
+        textTag.setAttribute('style', 'width: 100%;')
+        textTag.textContent = n
+        if (n < 10) {
+          balls.classList.add('bg-warning-subtle')
+        } else if (n < 20) {
+          balls.classList.add('bg-danger-subtle')
+        } else if (n < 30) {
+          balls.classList.add('bg-info-subtle')
+        } else if (n < 40) {
+          balls.classList.add('bg-success-subtle')
+        } else {
+          balls.classList.add('bg-body-secondary')
+        }
+        balls.appendChild(textTag)
+        containDiv.appendChild(balls)
+      })
+
+      const balls = document.createElement('div')
+      balls.classList.add('border', 'border-danger', 'border-4', 'rounded-circle', 'align-middle', 'd-flex', 'align-items-center')
+      balls.setAttribute('style', 'width: 100px; height: 100px; margin: 20px;')
+      
+      const textTag = document.createElement('div')
+      textTag.classList.add('text-center', 'fs-1', 'z-3')
+      textTag.setAttribute('style', 'width: 100%;')
+      textTag.textContent = rank
+
+      balls.appendChild(textTag)
+      containDiv.appendChild(balls)
+
+      const formDiv = document.querySelector('div')
+      formDiv.appendChild(containDiv)
+      
+    })
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

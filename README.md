@@ -17,3 +17,5 @@
 🖌️ [Bootstrap Grid 실습](front/grid.html)
 
 🖌️ [에어비앤비 클론 코딩](front/airbnb_clone.html)
+
+🖌️ [로또 번호 생성기](front/lotto.html)
