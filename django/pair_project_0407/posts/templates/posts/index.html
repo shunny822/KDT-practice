@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-5 fw-bold">{{ subject }}</h2>
+<div>
+  {% for post in posts %}
+  <a href="{% url 'posts:detail' post.pk %}" class="text-decoration-none text-black">
+    <p><span class="badge bg-secondary me-3" style="min-width: 50px;">{{ post.category }}</span>{{ post.pk }}.  {{ post.title }} </p>
+  </a> 
+  <hr>
+  {% endfor %}
+  {% endblock content %}
+</div>
